@@ -1,54 +1,57 @@
-# Java Parallel Web Crawler
+# Java Hotel Reservation System
 
-A Java-based web crawler that demonstrates concurrent web-page crawling, thread-safe URL processing, dynamic proxies, dependency injection, profiling, JSON configuration, and functional word-count analysis.
+A Java-based hotel reservation application that allows users to search for available rooms, make reservations, manage bookings, and perform administrative operations through a menu-driven interface.
 
 ## Overview
 
-This project implements both sequential and parallel web crawling strategies. The parallel crawler uses Java concurrency utilities to fetch and process multiple pages efficiently while preventing duplicate URL visits and respecting configured crawl timeouts.
+The Hotel Reservation System is designed to simplify basic hotel room reservation and management operations. The application provides separate user and administrative functionality for managing rooms, customers, and reservations.
 
-The project also includes a transparent profiling mechanism using Java dynamic proxies to record execution times for annotated methods.
+## Features
 
-## Key Features
+### Customer Features
 
-- Sequential and parallel web crawling
-- Real web-page crawling
-- Recursive parallel processing using `ForkJoinPool`
-- Thread-safe URL tracking
-- Configurable crawl timeout
-- Java dynamic proxy-based method profiling
-- JSON configuration loading
-- JSON result generation
-- Word frequency analysis using Java Stream API
-- Dependency injection using Guice
-- Automated unit testing
+- Search for available hotel rooms
+- Find and reserve a room
+- Create a customer account
+- View existing reservations
+- Manage reservation information
+- Exit the application safely
+
+### Administrator Features
+
+- Access administrative functionality
+- Manage hotel room information
+- Manage customer and reservation data
+- Perform hotel management operations
 
 ## Technologies
 
 - Java
-- Maven
-- Guice
-- ForkJoinPool
-- RecursiveAction
-- ConcurrentHashMap
-- ConcurrentSkipListSet
-- Java Reflection API
-- Dynamic Proxy
-- Java Stream API
-- JSoup
-- JSON
-- JUnit
+- Object-Oriented Programming
+- Java Collections
+- File/Data Handling
+- Exception Handling
+- Maven/Java development tools
 
-## Architecture
-
-The application uses a strategy-based architecture to support different crawling implementations:
+## Application Structure
 
 ```text
-Crawler
-   |
-   +-- SequentialWebCrawler
-   |
-   +-- ParallelWebCrawler
-             |
-             +-- ForkJoinPool
-             +-- RecursiveAction
-             +-- Thread-safe URL tracking
+Hotel Reservation System
+│
+├── HotelApplication
+│   └── Application entry point
+│
+├── MainMenu
+│   └── Customer operations
+│
+├── AdminMenu
+│   └── Administrative operations
+│
+├── Reservation
+│   └── Reservation data and booking information
+│
+├── HotelResource
+│   └── Hotel room and reservation management
+│
+└── Driver
+    └── Application execution
